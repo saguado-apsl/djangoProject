@@ -8,6 +8,18 @@
 {% block content %}
 
 <p>Index</p>
-{{hello}}
+
+{% if question_list %}
+{% for q in question_list %}
+
+<li><a href="{% url 'polls:detail' q.pk %}">{{ q.question_text|upper}}</a></li>
+
+{% endfor %}
+
+{% else %}
+
+    <p>No polls are available.</p>
+
+{% endif %}
 
 {% endblock %}

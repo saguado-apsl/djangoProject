@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from polls.views import index
 
+app_name = 'polls'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('polls/', include('polls.urls')),
+    path('polls/', include('polls.urls', namespace="polls")),
 ]
