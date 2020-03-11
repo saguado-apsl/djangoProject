@@ -15,5 +15,4 @@ class Selection(models.Model):
 
     def __str__(self):
         
-        return str(self.question) + ' ' + str(self.choice_text) + ' ' + str(self.votes) 
-
+        return str(self.question) + ' ' + str(self.choice_text) + ' ' + str(self.votes)
